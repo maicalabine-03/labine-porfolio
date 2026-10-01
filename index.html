@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maica Labine | Personal Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        :root {
+            --cocoa: #6B4F3A;
+            --light-cream: #F8F3E8;
+            --earth-brown: #8A6A4A;
+            --sand: #DCC9A9;
+            --leaf-green: #7A8F62;
+            --dark-leaf: #61754D;
+            --soft-brown: #A88F78;
+            --white: #FFFDF7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--light-cream);
+            color: var(--cocoa);
+            line-height: 1.7;
+        }
+
+        h1,
+        h2,
+        h3,
+        .quote,
+        .logo {
+            font-family: 'Playfair Display', serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(248, 243, 232, 0.95);
+
+            backdrop-filter: blur(10px);
+
+            border-bottom: 1px solid rgba(138, 106, 74, 0.12);
+
+            box-shadow: 0 3px 15px rgba(107, 79, 58, 0.10);
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 18px 0;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 600;
+            color: var(--cocoa);
+        }
+
+        .logo span {
+            color: var(--leaf-green);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--earth-brown);
+
+            position: relative;
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: "";
+
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+
+            width: 0;
+            height: 2px;
+
+            background: var(--leaf-green);
+
+            transition: 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--leaf-green);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+
+        /* =========================
+           HOME
+        ========================= */
+
+        #home {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 120px 20px 70px;
+
+            position: relative;
+
+            /* No background image */
+            background: var(--light-cream);
+        }
+
+        .home-content {
+            max-width: 900px;
+            width: 100%;
+
+            text-align: center;
+
+            animation: fadeUp 1s ease;
+        }
+
+        .small-title {
+            color: var(--leaf-green);
+
+            font-size: 14px;
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            margin-bottom: 18px;
+        }
+
+        .quote-box {
+            background: rgba(255, 253, 247, 0.92);
+
+            padding: 45px;
+
+            border-radius: 25px;
+
+            border: 1px solid rgba(138, 106, 74, 0.16);
+
+            box-shadow: 0 15px 45px rgba(107, 79, 58, 0.14);
+        }
+
+        .quote {
+            font-size: 28px;
+            line-height: 1.6;
+
+            color: var(--cocoa);
+        }
+
+        .author {
+            margin-top: 20px;
+
+            font-size: 15px;
+
+            color: var(--leaf-green);
+
+            font-weight: 600;
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .section-container {
+            width: 90%;
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .section-heading {
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .section-heading h2 {
+            font-size: 42px;
+
+            color: var(--cocoa);
+        }
+
+        .section-heading span {
+            display: block;
+
+            margin-top: 8px;
+
+            color: var(--leaf-green);
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+        }
+
+
+        /* =========================
+           PROFILE
+        ========================= */
+
+        #profile {
+            background: var(--white);
+        }
+
+        .profile-content {
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .profile-text {
+            max-width: 800px;
+        }
+
+        .profile-text h3 {
+            font-size: 38px;
+
+            margin-bottom: 18px;
+
+            color: var(--cocoa);
+        }
+
+        .profile-text h3 span {
+            color: var(--leaf-green);
+        }
+
+        .profile-text p {
+            color: var(--earth-brown);
+
+            margin-bottom: 15px;
+        }
+
+
+        /* =========================
+           PORTFOLIO CARDS
+        ========================= */
+
+        #quizzes,
+        #exams {
+            background: var(--light-cream);
+        }
+
+        #activities {
+            background: var(--white);
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 25px;
+        }
+
+        .card {
+            background: var(--white);
+
+            padding: 30px;
+
+            border-radius: 20px;
+
+            border: 1px solid rgba(138, 106, 74, 0.14);
+
+            box-shadow:
+                0 10px 30px rgba(107, 79, 58, 0.09);
+
+            transition: 0.35s ease;
+
+            position: relative;
+
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+            height: 5px;
+
+            background: var(--leaf-green);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--leaf-green);
+
+            box-shadow:
+                0 18px 40px rgba(107, 79, 58, 0.14);
+        }
+
+
+        /* =========================
+           QUIZ 1 IMAGE
+        ========================= */
+
+        .quiz-image {
+            display: block;
+
+            width: 100%;
+
+            max-height: 500px;
+
+            object-fit: contain;
+
+            object-position: center;
+
+            border-radius: 12px;
+
+            margin-bottom: 20px;
+
+            border:
+                1px solid rgba(138, 106, 74, 0.16);
+
+            background: var(--light-cream);
+        }
+
+        .card h3 {
+            font-size: 23px;
+
+            color: var(--cocoa);
+
+            margin-bottom: 8px;
+        }
+
+        .card .subject {
+            font-size: 13px;
+
+            color: var(--leaf-green);
+
+            font-weight: 600;
+
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            font-size: 14px;
+
+            color: var(--earth-brown);
+
+            margin-bottom: 10px;
+        }
+
+        .date {
+            font-size: 12px;
+
+            color: var(--soft-brown);
+
+            margin-bottom: 20px;
+        }
+
+
+        /* =========================
+           VIEW BUTTON
+        ========================= */
+
+        .view-button {
+            display: inline-block;
+
+            padding: 9px 20px;
+
+            border-radius: 25px;
+
+            background: var(--leaf-green);
+
+            color: var(--white);
+
+            font-size: 13px;
+
+            font-weight: 500;
+
+            border: 1px solid var(--earth-brown);
+
+            transition: 0.3s ease;
+        }
+
+        .view-button:hover {
+            background: var(--earth-brown);
+
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           ADD MORE CARD
+        ========================= */
+
+        .add-card {
+            border: 2px dashed var(--sand);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            min-height: 260px;
+
+            background: rgba(255, 253, 247, 0.55);
+
+            box-shadow: none;
+        }
+
+        .add-card:hover {
+            border-color: var(--leaf-green);
+
+            background: var(--white);
+        }
+
+        .add-content {
+            text-align: center;
+        }
+
+        .add-content .plus {
+            font-size: 40px;
+
+            color: var(--leaf-green);
+        }
+
+        .add-content p {
+            margin-top: 5px;
+
+            color: var(--earth-brown);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: var(--cocoa);
+
+            color: var(--light-cream);
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-top: 5px solid var(--leaf-green);
+        }
+
+        footer h3 {
+            font-size: 25px;
+
+            margin-bottom: 8px;
+
+            color: var(--light-cream);
+        }
+
+        footer p {
+            font-size: 13px;
+
+            color: var(--sand);
+        }
+
+
+        /* =========================
+           ANIMATION
+        ========================= */
+
+        @keyframes fadeUp {
+
+            from {
+                opacity: 0;
+
+                transform: translateY(25px);
+            }
+
+            to {
+                opacity: 1;
+
+                transform: translateY(0);
+            }
+
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-container {
+                flex-direction: column;
+
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 15px;
+
+                flex-wrap: wrap;
+
+                justify-content: center;
+            }
+
+            .nav-links a {
+                font-size: 12px;
+            }
+
+            #home {
+                padding-top: 160px;
+            }
+
+            .quote-box {
+                padding: 30px 22px;
+            }
+
+            .quote {
+                font-size: 20px;
+            }
+
+            .profile-content {
+                text-align: center;
+            }
+
+            .section-heading h2 {
+                font-size: 34px;
+            }
+
+            .quiz-image {
+                max-height: 450px;
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            .nav-links {
+                gap: 10px;
+            }
+
+            .nav-links a {
+                font-size: 11px;
+            }
+
+            .logo {
+                font-size: 23px;
+            }
+
+            .quote {
+                font-size: 18px;
+            }
+
+            .profile-text h3 {
+                font-size: 30px;
+            }
+
+            section {
+                padding: 75px 15px;
+            }
+
+            .quiz-image {
+                max-height: 400px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================= -->
+
+    <nav>
+
+        <div class="nav-container">
+
+            <a href="#home" class="logo">
+                Maica<span>.</span>
+            </a>
+
+            <ul class="nav-links">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#profile">Profile</a>
+                </li>
+
+                <li>
+                    <a href="#quizzes">Quizzes</a>
+                </li>
+
+                <li>
+                    <a href="#activities">Activities</a>
+                </li>
+
+                <li>
+                    <a href="#exams">Exams</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HOME
+    ========================= -->
+
+    <section id="home">
+
+        <div class="home-content">
+
+            <div class="small-title">
+                Welcome to My Portfolio
+            </div>
+
+            <div class="quote-box">
+
+                <p class="quote">
+
+                    “I am not looking for a career; I am looking for a life.
+                    And life is a process of becoming, a combination of states
+                    we have to go through. Where people fail is that they wish
+                    to elect a state and remain in it.”
+
+                </p>
+
+                <p class="author">
+                    — Anaïs Nin
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PROFILE
+    ========================= -->
+
+    <section id="profile">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span>
+                    Get to know me
+                </span>
+
+                <h2>
+                    
+                </h2>
+
+            </div>
+
+
+            <div class="profile-content">
+
+                <div class="profile-text">
+
+                    <h3>
+
+                        Hi, Hello! I Am
+                        <span>
+                            Maica Labine
+                        </span>
+
+                    </h3>
+
+                    <p>
+
+                    I am a BSCS-3B student who is continuously learning and growing through my school experiences.
+
+                    </p>
+
+                    <p>
+
+                    I enjoy simple things that make me happy and help me express my creativity.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUIZZES
+    ========================= -->
+
+    <section id="quizzes">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span>
+                    My School Work
+                </span>
+
+                <h2>
+                    Quizzes
+                </h2>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- QUIZ 1 -->
+
+                <div class="card">
+
+                    <img
+                        src="quiz1.jfif"
+                        alt="Quiz 1 handwritten quiz"
+                        class="quiz-image"
+                    >
+
+                    <h3>
+                        Quiz 1
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                        Emerging Technologies 
+                    </p>
+
+                    <div class="date">
+                        Date: August 25, 2026
+                    </div>
+
+                    <a href="quiz1.jfif" target="_blank" class="view-button">
+                        View Quiz
+                    </a>
+
+                </div>
+
+
+                <!-- QUIZ 2 -->
+
+                <div class="card">
+
+                    <h3>
+                        Quiz 2
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                        Quiz
+                    </p>
+
+                    <div class="date">
+                        Date: 
+                    </div>
+
+                    <a href="#" class="view-button">
+                        View Quiz
+                    </a>
+
+                </div>
+
+
+                <!-- ADD MORE QUIZZES -->
+
+                <div class="card add-card">
+
+                    <div class="add-content">
+
+                        <div class="plus">
+                            +
+                        </div>
+
+                        <p>
+                            Add more quizzes
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         ACTIVITIES
+    ========================= -->
+
+    <section id="activities">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <h2>
+                    Activities
+                </h2>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- ACTIVITY 1 -->
+
+                <div class="card">
+
+                    <h3>
+                        Activity 1
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                        WALA PA
+                    </p>
+
+                    <div class="date">
+                        Date: 
+                    </div>
+
+                    <a href="#" class="view-button">
+                        View Activity
+                    </a>
+
+                </div>
+
+
+                <!-- ACTIVITY 2 -->
+
+                <div class="card">
+
+                    <h3>
+                        Activity 2
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                       WALA PA
+                    </p>
+
+                    <div class="date">
+                        Date: 
+                    </div>
+
+                    <a href="#" class="view-button">
+                        View Activity
+                    </a>
+
+                </div>
+
+
+                <!-- ADD MORE ACTIVITIES -->
+
+                <div class="card add-card">
+
+                    <div class="add-content">
+
+                        <div class="plus">
+                            +
+                        </div>
+
+                        <p>
+                            Add more activities
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         EXAMS
+    ========================= -->
+
+    <section id="exams">
+
+        <div class="section-container">
+
+            <div class="section-heading">
+
+                <span>
+                  
+                </span>
+
+                <h2>
+                    Exams
+                </h2>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <!-- EXAM 1 -->
+
+                <div class="card">
+
+                    <h3>
+                        Exam 1
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                        Midterm Exam.
+                    </p>
+
+                    <div class="date">
+                        Date: 
+                    </div>
+
+                    <a href="#" class="view-button">
+                        View Exam
+                    </a>
+
+                </div>
+
+
+                <!-- EXAM 2 -->
+
+                <div class="card">
+
+                    <h3>
+                        Exam 2
+                    </h3>
+
+                    <div class="subject">
+                        DCIT-26
+                    </div>
+
+                    <p>
+                        Final Exam.
+                    </p>
+
+                    <div class="date">
+                        Date: 
+                    </div>
+
+                    <a href="#" class="view-button">
+                        View Exam
+                    </a>
+
+                </div>
+
+
+                <!-- ADD MORE EXAMS -->
+
+                <div class="card add-card">
+
+                    <div class="add-content">
+
+                        <div class="plus">
+                            +
+                        </div>
+
+                        <p>
+                            Add more exams
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+
+    <footer>
+
+        <h3>
+            Maica Labine
+        </h3>
+
+        <p>
+            BSCS-3B • Learning, Growing, and Becoming
+        </p>
+
+    </footer>
+
+
+</body>
+</html>
